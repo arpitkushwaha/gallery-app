@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:gkb/utilities/constants.dart';
 import 'package:gkb/views/home_screen.dart';
 import 'package:gkb/views/login_screen.dart';
+import 'package:gkb/views/settings_screen.dart';
 
 void main() {
   runApp(MyApp());
@@ -33,6 +34,7 @@ class _MyAppState extends State<MyApp> {
       routes: {
         Constant.loginScreenRoute : (context) => LoginScreen(),
         Constant.homeScreenRoute : (context) => HomeScreen(),
+        Constant.settingsScreenRoute : (context) => SettingsScreen(),
       },
     );
   }

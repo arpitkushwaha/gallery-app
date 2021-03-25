@@ -2,7 +2,6 @@ import 'dart:typed_data';
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:gkb/views/edit_image_screen.dart';
 import 'package:gkb/views/image_screen.dart';
 import 'package:gkb/views/video_screen.dart';
 import 'package:photo_manager/photo_manager.dart';

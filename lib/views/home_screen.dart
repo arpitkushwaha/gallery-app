@@ -5,6 +5,8 @@ import 'package:gkb/utilities/constants.dart';
 import 'package:gkb/views/asset_thumbnail.dart';
 import 'package:photo_manager/photo_manager.dart';
 
+import '../utilities/constants.dart';
+
 class HomeScreen extends StatefulWidget {
   @override
   _HomeScreenState createState() => _HomeScreenState();
@@ -25,6 +27,39 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: Common.appBar('Home'),
+
+      drawer: Drawer(
+        child: ListView(
+          children: <Widget>[
+            ListTile(
+              onTap: (){
+                Navigator.pushReplacementNamed(context, Constant.homeScreenRoute);
+              },
+              title: Text("Galllery"),
+              leading: Icon(Icons.photo),
+            ),
+            ListTile(
+              onTap: (){
+                Navigator.pushReplacementNamed(context, Constant.settingsScreenRoute);
+              },
+              title: Text("Settings"),
+              leading: Icon(Icons.settings),
+            ),
+            SizedBox(
+              height: 20,
+            ),
+            ListTile(
+              onTap: (){
+                Navigator.pushReplacementNamed(context, Constant.loginScreenRoute);
+              },
+              title: Text("Log Out"),
+              leading: Icon(Icons.logout),
+            ),
+          ],
+        ),
+      ),
+
+
         body: GridView.builder(
           gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
             // A grid view with 3 items per row
