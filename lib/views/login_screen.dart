@@ -32,12 +32,12 @@ class _LoginScreenState extends State<LoginScreen> {
         _isAuthenticating = true;
         _authorized = 'Authenticating';
       });
-      authenticated = await auth.authenticateWithBiometrics(
+      authenticated = await auth.authenticate(
           localizedReason:
               'Scan your fingerprint (or face or whatever) to authenticate',
           useErrorDialogs: true,
           stickyAuth: true,
-          //biometricOnly: true
+          biometricOnly: true
           );
       setState(() {
         _isAuthenticating = false;
@@ -106,8 +106,3 @@ class _LoginScreenState extends State<LoginScreen> {
   }
 }
 
-enum _SupportState {
-  unknown,
-  supported,
-  unsupported,
-}

@@ -5,11 +5,11 @@ import 'package:flutter/material.dart';
 
 class ImageScreen extends StatefulWidget {
   const ImageScreen({
-    Key key,
-    @required this.imageFile,
+    Key? key,
+    required this.imageFile,
   }) : super(key: key);
 
-  final Future<File> imageFile;
+  final Future<File?> imageFile;
 
   @override
   _ImageScreenState createState() => _ImageScreenState();
@@ -29,7 +29,7 @@ class _ImageScreenState extends State<ImageScreen> {
     return Container(
       color: Colors.black,
       alignment: Alignment.center,
-      child: FutureBuilder<File>(
+      child: FutureBuilder<File?>(
         future: widget.imageFile,
         builder: (_, snapshot) {
           final file = snapshot.data;
